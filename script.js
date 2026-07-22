@@ -162,6 +162,18 @@ function typing(){
         box.appendChild(p);
 
 
+        // စာအသစ်ပေါ်တိုင်း အောက်ကိုရွှေ့
+        box.scrollTop = box.scrollHeight;
+
+
+        // စာအရမ်းများရင် အပေါ်ဆုံးစာကြောင်းဖျက်
+        if(box.children.length > 8){
+
+            box.removeChild(box.firstElementChild);
+
+        }
+
+
         index++;
 
         setTimeout(typing,2000);
