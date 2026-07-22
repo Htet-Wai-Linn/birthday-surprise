@@ -270,7 +270,7 @@ section {
 }
 .line {
     opacity:0;
-    animation: lineShow 1s forwards;
+    animation: lineShow 2s forwards;
 }
 
 
