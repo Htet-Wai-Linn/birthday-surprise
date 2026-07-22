@@ -16,32 +16,54 @@ setInterval(() => {
 }, 500);
 
 
-// Typing Message
-const message = "မွေးနေ့မှာ ပျော်ရွှင်ပါစေ ❤️\nအမြဲတမ်း ချစ်စရာကောင်းတဲ့ ကောင်မလေးဖြစ်နေပါစေ 🤍";
-
-let index = 0;
-
-function typing() {
-    const text = document.getElementById("typing-message");
-
-    if (text && index < message.length) {
-        text.innerHTML += message[index];
-        index++;
-        setTimeout(typing, 100);
-    }
-}
-
+// Page Animation Flow
 window.onload = () => {
-    typing();
+
+    const intro = document.getElementById("intro-page");
+    const cake = document.getElementById("cake-page");
+    const wish = document.getElementById("wish-page");
+    const final = document.getElementById("final-page");
+
+    setTimeout(() => {
+        intro.style.display = "none";
+        cake.style.display = "flex";
+    }, 4000);
+
+
+    setTimeout(() => {
+        cake.style.display = "none";
+        wish.style.display = "flex";
+
+        typing();
+
+    }, 9000);
+
+
+    setTimeout(() => {
+        wish.style.display = "none";
+        final.style.display = "flex";
+
+    }, 15000);
+
 };
 
 
-// Candle flame effect
-const flame = document.getElementById("flame");
+// Typing Effect
+const message =
+"မွေးနေ့မှာ ပျော်ရွှင်ပါစေ ❤️\nအမြဲတမ်း ချစ်စရာကောင်းတဲ့ ကောင်မလေးဖြစ်နေပါစေ 🤍";
 
-if (flame) {
-    setInterval(() => {
-        flame.style.transform =
-        `scale(${1 + Math.random() * 0.2})`;
-    }, 300);
+let i = 0;
+
+function typing(){
+
+    const text = document.getElementById("typing-message");
+
+    if(text && i < message.length){
+
+        text.innerHTML += message.charAt(i);
+        i++;
+
+        setTimeout(typing,100);
+
+    }
 }
