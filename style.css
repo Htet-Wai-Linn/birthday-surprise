@@ -77,13 +77,6 @@ section {
 
 .tier {
     margin:auto;
-    background:#ff9fc5;
-    border-radius:20px;
-}
-
-
-.tier {
-    margin:auto;
     background:#ffb6d9;
     border-radius:15px 15px 10px 10px;
     position:relative;
