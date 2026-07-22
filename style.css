@@ -185,3 +185,17 @@ section {
         transform:scale(1);
     }
 }
+
+#intro-page,
+#cake-page,
+#wish-page,
+#final-page {
+    width: 100%;
+    height: 100vh;
+}
+
+#cake-page,
+#wish-page,
+#final-page {
+    display: none;
+}
