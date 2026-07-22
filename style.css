@@ -167,9 +167,13 @@ section {
 
 
 #typing {
+    width:90%;
+    max-width:700px;
+    height:65vh;
+    overflow:hidden;
     font-size:22px;
     color:#555;
-    white-space:pre-line;
+    line-height:1.8;
 }
 
 
