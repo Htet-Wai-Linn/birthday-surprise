@@ -164,7 +164,7 @@ function typing(){
 
         index++;
 
-        setTimeout(typing,800);
+        setTimeout(typing,2000);
 
     }
 
