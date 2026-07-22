@@ -45,8 +45,10 @@ section {
 
 
 .cake {
+    width:300px;
     text-align:center;
-    animation: zoom 2s;
+    position:relative;
+    animation:zoom 2s;
 }
 
 
@@ -56,8 +58,8 @@ section {
     background:white;
     margin:auto;
     position:relative;
+    z-index:5;
 }
-
 
 #flame {
     width:22px;
@@ -96,11 +98,13 @@ section {
 .tier2 {
     width:200px;
     height:55px;
+    margin-top:-5px;
 }
 
 .tier3 {
     width:140px;
     height:50px;
+    margin-top:-5px;
 }
 
 .tier::before {
