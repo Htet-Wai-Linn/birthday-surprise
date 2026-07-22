@@ -77,48 +77,55 @@ section {
 
 .tier {
     margin:auto;
-    background:#ffb6d9;
-    border-radius:15px 15px 10px 10px;
     position:relative;
-    box-shadow:0 8px 15px rgba(0,0,0,0.15);
+    background:linear-gradient(#ffb6d9,#ff7eb3);
+    border-radius:20px 20px 15px 15px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
 }
 
+/* အောက်ဆုံး */
 .tier1 {
     width:260px;
-    height:60px;
+    height:70px;
 }
 
+/* အလယ် */
 .tier2 {
     width:200px;
-    height:55px;
-    margin-top:-5px;
+    height:60px;
+    margin-top:-15px;
 }
 
+/* အပေါ် */
 .tier3 {
     width:140px;
     height:50px;
-    margin-top:-5px;
+    margin-top:-15px;
 }
 
+
+/* Cream အလွှာ */
 .tier::before {
     content:"";
     position:absolute;
-    top:-10px;
-    left:10px;
-    right:10px;
-    height:20px;
-    background:white;
+    top:-8px;
+    left:0;
+    width:100%;
+    height:18px;
+    background:#fff;
     border-radius:50%;
 }
 
+
+/* အလှဆင် */
 .tier::after {
     content:"🍓  🍓  🍓";
     position:absolute;
-    top:10px;
-    left:25px;
-    font-size:18px;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:16px;
 }
-
 
 /* Photos */
 .photos {
