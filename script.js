@@ -1,47 +1,73 @@
 // Floating Hearts
+
 setInterval(() => {
 
     const heart = document.createElement("div");
 
     heart.innerHTML = "❤️";
+
     heart.className = "heart-float";
 
+
     heart.style.left = Math.random() * 100 + "vw";
+
     heart.style.animationDuration =
         (3 + Math.random() * 3) + "s";
+
 
     document.body.appendChild(heart);
 
 
+
     setTimeout(() => {
+
         heart.remove();
-    }, 6000);
 
-}, 500);
-
+    },6000);
 
 
-// Page Animation Flow
+},500);
+
+
+
+
+
+
+// Page Flow
+
 
 window.onload = function(){
 
+
     const intro = document.getElementById("intro-page");
+
     const cake = document.getElementById("cake-page");
+
     const wish = document.getElementById("wish-page");
+
     const final = document.getElementById("final-page");
 
 
-    // Intro 4 seconds
-    setTimeout(() => {
-
-        intro.style.display = "none";
-        cake.style.display = "flex";
 
 
-        const music = document.getElementById("birthdayMusic");
+    // Intro 4 sec
+
+    setTimeout(()=>{
+
+
+        intro.style.display="none";
+
+        cake.style.display="flex";
+
+
+        const music =
+        document.getElementById("birthdayMusic");
+
 
         if(music){
+
             music.play().catch(()=>{});
+
         }
 
 
@@ -49,29 +75,89 @@ window.onload = function(){
 
 
 
-    // Cake 8 seconds
-    setTimeout(() => {
 
-        cake.style.display = "none";
 
-        wish.style.display = "flex";
 
-        typing();
+
+    // Cake show 8 sec
+
+    setTimeout(()=>{
+
+
+        // Candle blow
+
+        document
+        .querySelector(".candle")
+        .classList.add("off");
+
+
+
+        // Cake shake
+
+        document
+        .querySelector(".cake")
+        .classList.add("break");
+
+
+
+        // Fireworks
+
+        document
+        .querySelector(".fireworks")
+        .classList.add("show");
+
+
+
+        // Confetti
+
+        createConfetti();
+
 
 
     },12000);
 
 
 
-    // Final after message finish
-    setTimeout(() => {
-
-        wish.style.display = "none";
-
-        final.style.display = "flex";
 
 
-    },70000);
+
+
+    // Go Wish
+
+    setTimeout(()=>{
+
+
+        cake.style.display="none";
+
+
+        wish.style.display="flex";
+
+
+        typing();
+
+
+
+    },16000);
+
+
+
+
+
+
+
+    // Final
+
+    setTimeout(()=>{
+
+
+        wish.style.display="none";
+
+
+        final.style.display="flex";
+
+
+    },75000);
+
 
 
 };
@@ -79,7 +165,12 @@ window.onload = function(){
 
 
 
-// Wish Message
+
+
+
+
+// Wish Text
+
 
 const lines = [
 
@@ -143,36 +234,107 @@ const lines = [
 
 
 
+
 let index = 0;
+
 
 
 
 function typing(){
 
-    const box = document.getElementById("typing");
+
+    const box =
+    document.getElementById("typing");
+
 
 
     if(index < lines.length){
 
 
-        const p = document.createElement("p");
+        let p =
+        document.createElement("p");
+
+
 
         p.innerHTML = lines[index];
 
-        p.className = "line";
+
+        p.className="line";
+
 
 
         box.appendChild(p);
 
 
-        // နောက်ဆုံးစာကြောင်းကိုမြင်အောင် auto scroll
-        box.scrollTop = box.scrollHeight;
+
+        box.scrollTop =
+        box.scrollHeight;
+
 
 
         index++;
 
 
+
         setTimeout(typing,2000);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+// Confetti
+
+
+function createConfetti(){
+
+
+    for(let i=0;i<80;i++){
+
+
+        let c =
+        document.createElement("div");
+
+
+
+        c.className="confetti";
+
+
+
+        c.style.left =
+        Math.random()*100+"vw";
+
+
+
+        c.style.background =
+        "hsl("+Math.random()*360+",100%,50%)";
+
+
+
+        c.style.animationDuration =
+        (2+Math.random()*3)+"s";
+
+
+
+        document.body.appendChild(c);
+
+
+
+        setTimeout(()=>{
+
+            c.remove();
+
+        },5000);
+
 
 
     }
