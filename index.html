@@ -1,114 +1,88 @@
 <!DOCTYPE html>
 <html lang="my">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday 🤍 ကောင်မလေး 🤍</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Happy Birthday 🤍 ကောင်မလေး 🤍</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Intro Page -->
-    <section id="intro-page">
-        <div class="intro-content">
-            <h1 class="birthday-title">🎂 Happy Birthday 🎂</h1>
-            <h2 class="girl-name">🤍 ကောင်မလေး 🤍</h2>
+<!-- Intro -->
+<section id="intro-page">
+    <div class="intro-content">
+        <h1>🎂 Happy Birthday 🎂</h1>
+        <h2>🤍 ကောင်မလေး 🤍</h2>
+    </div>
+</section>
+
+
+<!-- Cake -->
+<section id="cake-page">
+
+    <audio id="birthdayMusic" loop>
+        <source src="happy-birthday.mp3">
+    </audio>
+
+    <div class="cake">
+
+        <div class="candle">
+            <div id="flame"></div>
         </div>
 
-        <div class="floating-hearts"></div>
-    </section>
+        <div class="tier tier1"></div>
+        <div class="tier tier2"></div>
+        <div class="tier tier3"></div>
 
-    <!-- Cake Page -->
-    <section id="cake-page">
+        <div class="photos">
 
-        <audio id="birthdayMusic" loop>
-            <source src="happy-birthday.mp3" type="audio/mpeg">
-        </audio>
+            <img src="att.1vfu4cZ2hvNZw_kl_qtIuIlmi5JoJvEsUSBAgLNOeKs.jpeg">
 
-        <div class="cake-scene">
+            <img src="att.Ix3vPbLrdrnQPTLMiJXFwoSVeuz0Y3JAHlerSG_TMN4.jpeg">
 
-            <div class="cake-container">
+            <img src="att.KkI1N02Bsy3SP3QDqtfKWkp1FE8RjxzF_Fn_w3K9C_U.jpeg">
 
-                <!-- Candle -->
-                <div class="candle">
-                    <div id="flame"></div>
-                </div>
+            <img src="att.Y73OjRS7tfT0p-NU1A_xr9qiBp5eOmP12VqCZr6yNm8.jpeg">
 
-                <!-- Cake -->
-                <div id="cake" class="cake">
-
-                    <div class="cake-top">
-                        <div class="heart-photo">
-                            <img src="att.1vfu4cZ2hvNZw_kl_qtIuIlmi5JoJvEsUSBAgLNOeKs.jpeg">
-                        </div>
-
-                        <div class="heart-photo">
-                            <img src="att.Ix3vPbLrdrnQPTLMiJXFwoSVeuz0Y3JAHlerSG_TMN4.jpeg">
-                        </div>
-
-                        <div class="heart-photo">
-                            <img src="att.KkI1N02Bsy3SP3QDqtfKWkp1FE8RjxzF_Fn_w3K9C_U.jpeg">
-                        </div>
-
-                        <div class="heart-photo">
-                            <img src="att.Y73OjRS7tfT0p-NU1A_xr9qiBp5eOmP12VqCZr6yNm8.jpeg">
-                        </div>
-
-                        <div class="heart-photo">
-                            <img src="att.n-4UaJblU20v4mOtex2FMcch7W08SWSMATAS7uCyTMI.jpeg">
-                        </div>
-
-                    </div>
-
-                    <div class="tier tier1"></div>
-                    <div class="tier tier2"></div>
-                    <div class="tier tier3"></div>
-
-                </div>
-
-            </div>
-
-            <div id="blow-text">
-                💨
-            </div>
+            <img src="att.n-4UaJblU20v4mOtex2FMcch7W08SWSMATAS7uCyTMI.jpeg">
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- Wish Page -->
-    <section id="wish-page">
+</section>
 
-        <div class="wish-box">
 
-            <h1>🎂 Happy Birthday 🎂</h1>
+<!-- Wish -->
+<section id="wish-page">
 
-            <h2>🤍 ကောင်မလေး 🤍</h2>
+    <div class="wish">
+        <h1>🎂 Happy Birthday 🎂</h1>
+        <h2>🤍 ကောင်မလေး 🤍</h2>
 
-            <div id="typing-message"></div>
+        <p id="typing"></p>
+    </div>
 
-        </div>
+</section>
 
-    </section>
 
-    <!-- Finale -->
-    <section id="final-page">
+<!-- Final -->
+<section id="final-page">
 
-        <div class="final-text">
+<div class="final">
+🤍<br>
+ချစ်တယ်နော်<br>
+ကောင်မလေး<br>
+🤍
+</div>
 
-            🤍<br>
-            ချစ်တယ်နော်<br>
-            ကောင်မလေး<br>
-            🤍
+</section>
 
-        </div>
 
-        <div class="fireworks"></div>
-
-    </section>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
