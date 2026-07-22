@@ -148,22 +148,24 @@ let index = 0;
 
 function typing(){
 
-
-    const box =
-    document.getElementById("typing");
+    const box = document.getElementById("typing");
 
 
-    if(index < text.length){
+    if(index < lines.length){
 
+        let p = document.createElement("p");
 
-        box.innerHTML += text.charAt(index);
+        p.innerHTML = lines[index];
+
+        p.className = "line";
+
+        box.appendChild(p);
+
 
         index++;
 
-        setTimeout(typing,100);
-
+        setTimeout(typing,800);
 
     }
-
 
 }
