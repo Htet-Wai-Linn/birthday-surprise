@@ -1,4 +1,4 @@
-// Floating hearts
+// Floating Hearts
 setInterval(() => {
 
     const heart = document.createElement("div");
@@ -17,15 +17,13 @@ setInterval(() => {
         heart.remove();
     }, 6000);
 
-
 }, 500);
 
 
 
-// Page Change
+// Page Animation Flow
 
 window.onload = function(){
-
 
     const intro = document.getElementById("intro-page");
     const cake = document.getElementById("cake-page");
@@ -34,20 +32,16 @@ window.onload = function(){
 
 
     // Intro 4 seconds
-
-    setTimeout(()=>{
+    setTimeout(() => {
 
         intro.style.display = "none";
-
         cake.style.display = "flex";
 
 
-        // Music start
-        const music =
-        document.getElementById("birthdayMusic");
+        const music = document.getElementById("birthdayMusic");
 
         if(music){
-            music.play();
+            music.play().catch(()=>{});
         }
 
 
@@ -56,8 +50,7 @@ window.onload = function(){
 
 
     // Cake 8 seconds
-
-    setTimeout(()=>{
+    setTimeout(() => {
 
         cake.style.display = "none";
 
@@ -70,24 +63,23 @@ window.onload = function(){
 
 
 
-    // Final
-
-    setTimeout(()=>{
+    // Final after message finish
+    setTimeout(() => {
 
         wish.style.display = "none";
 
         final.style.display = "flex";
 
 
-    },60000);
-
+    },70000);
 
 
 };
 
 
 
-// Typing effect
+
+// Wish Message
 
 const lines = [
 
@@ -96,32 +88,39 @@ const lines = [
 "",
 
 "ကောင်မလေးရဲ့အပြုံးလေးကို မြင်ရတိုင်း",
+
 "ကို့စိတ်ထဲမှာ ပျော်ရွှင်မှုတွေ ပြည့်နှက်လာတယ်",
 
 "",
 
 "ကောင်မလေးရဲ့အသံလေးကို ကြားရတိုင်း",
+
 "နေ့တစ်နေ့ရဲ့ ပင်ပန်းမှုတွေ ပျောက်ကွယ်သွားတယ်",
 
 "",
 
 "ပျော်ရွှင်တဲ့အချိန်တွေမှာပဲဖြစ်ဖြစ်",
+
 "စိတ်ညစ်ရတဲ့အချိန်တွေမှာပဲဖြစ်ဖြစ်",
+
 "ကောင်မလေးဘေးမှာ ရှိနေပေးချင်တဲ့သူပါ",
 
 "",
 
 "ဒီမွေးနေ့ကစပြီး",
+
 "ကောင်မလေးရဲ့ဆန္ဒတွေ အားလုံး ပြည့်ဝပါစေ။",
 
 "",
 
 "ကောင်မလေးရဲ့ အိပ်မက်တွေ တစ်ခုပြီးတစ်ခု",
+
 "အကောင်အထည်ဖော်နိုင်ပါစေ။",
 
 "",
 
 "ကောင်မလေးရဲ့ နေ့ရက်တိုင်း",
+
 "အပြုံးတွေနဲ့ ပြည့်နှက်နေပါစေနော်",
 
 "",
@@ -143,7 +142,9 @@ const lines = [
 ];
 
 
+
 let index = 0;
+
 
 
 function typing(){
@@ -153,30 +154,26 @@ function typing(){
 
     if(index < lines.length){
 
-        let p = document.createElement("p");
+
+        const p = document.createElement("p");
 
         p.innerHTML = lines[index];
 
         p.className = "line";
 
+
         box.appendChild(p);
 
 
-        // စာအသစ်ပေါ်တိုင်း အောက်ကိုရွှေ့
+        // နောက်ဆုံးစာကြောင်းကိုမြင်အောင် auto scroll
         box.scrollTop = box.scrollHeight;
-
-
-        // စာအရမ်းများရင် အပေါ်ဆုံးစာကြောင်းဖျက်
-        if(box.children.length > 8){
-
-            box.removeChild(box.firstElementChild);
-
-        }
 
 
         index++;
 
+
         setTimeout(typing,2000);
+
 
     }
 
