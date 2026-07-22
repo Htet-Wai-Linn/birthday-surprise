@@ -79,7 +79,7 @@ window.onload = function(){
         final.style.display = "flex";
 
 
-    },19000);
+    },60000);
 
 
 
