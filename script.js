@@ -1,69 +1,121 @@
-// Floating Hearts
+// Floating hearts
 setInterval(() => {
+
     const heart = document.createElement("div");
+
     heart.innerHTML = "❤️";
     heart.className = "heart-float";
 
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+    heart.style.animationDuration =
+        (3 + Math.random() * 3) + "s";
 
     document.body.appendChild(heart);
+
 
     setTimeout(() => {
         heart.remove();
     }, 6000);
 
+
 }, 500);
 
 
-// Page Animation Flow
-window.onload = () => {
+
+// Page Change
+
+window.onload = function(){
+
 
     const intro = document.getElementById("intro-page");
     const cake = document.getElementById("cake-page");
     const wish = document.getElementById("wish-page");
     const final = document.getElementById("final-page");
 
-    setTimeout(() => {
+
+    // Intro 4 seconds
+
+    setTimeout(()=>{
+
         intro.style.display = "none";
+
         cake.style.display = "flex";
-    }, 4000);
 
 
-    setTimeout(() => {
+        // Music start
+        const music =
+        document.getElementById("birthdayMusic");
+
+        if(music){
+            music.play();
+        }
+
+
+    },4000);
+
+
+
+    // Cake 8 seconds
+
+    setTimeout(()=>{
+
         cake.style.display = "none";
+
         wish.style.display = "flex";
 
         typing();
 
-    }, 9000);
+
+    },12000);
 
 
-    setTimeout(() => {
+
+    // Final
+
+    setTimeout(()=>{
+
         wish.style.display = "none";
+
         final.style.display = "flex";
 
-    }, 15000);
+
+    },19000);
+
+
 
 };
 
 
-// Typing Effect
-const message =
-"မွေးနေ့မှာ ပျော်ရွှင်ပါစေ ❤️\nအမြဲတမ်း ချစ်စရာကောင်းတဲ့ ကောင်မလေးဖြစ်နေပါစေ 🤍";
 
-let i = 0;
+// Typing effect
+
+const text =
+"မွေးနေ့မှာ ပျော်ရွှင်ပါစေ ❤️\n\n"+
+"အမြဲတမ်း ချစ်စရာကောင်းတဲ့\n"+
+"ကောင်မလေးဖြစ်နေပါစေ 🤍";
+
+
+let index = 0;
+
 
 function typing(){
 
-    const text = document.getElementById("typing-message");
 
-    if(text && i < message.length){
+    const box =
+    document.getElementById("typing");
 
-        text.innerHTML += message.charAt(i);
-        i++;
+
+    if(index < text.length){
+
+
+        box.innerHTML += text.charAt(index);
+
+        index++;
 
         setTimeout(typing,100);
 
+
     }
+
+
 }
