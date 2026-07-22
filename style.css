@@ -256,3 +256,22 @@ section {
     }
 
 }
+.line {
+    opacity:0;
+    animation: lineShow 1s forwards;
+}
+
+
+@keyframes lineShow {
+
+    from {
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
